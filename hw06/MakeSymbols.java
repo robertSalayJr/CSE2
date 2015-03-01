@@ -5,7 +5,7 @@
 // Create an int [1-100], display # of * if even, & if odd
 public class MakeSymbols{
     public static void main(String[]args){
-        int rando = (int)(Math.random() * 100) + 1; //generate # 1-100
+        int rando = (int)(Math.random() * 100); //generate # 0-100
         System.out.println("Random number generated: " + rando); 
         for(int i=1; i<=rando; i++){
             if(rando%2==0){ //if # generated is even
