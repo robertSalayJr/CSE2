@@ -3,8 +3,7 @@
 //HW08- MG's Adventure World
 //3/21/15
 // Create an ASCII game using multiple methods.
-import java.util.Scanner
-;
+import java.util.Scanner;
 public class HW8{
     public static void main(String[] args) {
             char option;
