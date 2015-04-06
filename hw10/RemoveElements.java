@@ -57,7 +57,7 @@ int index,target;
       int[] list;
       list = new int[10];
       for(int i = 0; i<10; i++){
-          int nextOne = randomGenerator.nextInt(10);
+          int nextOne = randomGenerator.nextInt(10); //creates a random int 0-9 for each point in array
           list[i] = nextOne;
       }
       return list;
@@ -65,12 +65,12 @@ int index,target;
   
   public static int[] delete(int[] list, int pos){
       int[] newList;
-      newList = new int[9];
+      newList = new int[9]; //one point, chosen by user, is removed, so newList only has to be 9 points instead of 10
       for(int i = 0; i<9; i++){
           if(i < pos - 1){
               newList[i] = list[i];
           } else {
-              newList[i] = list[i+1];
+              newList[i] = list[i+1]; //skips chosen position when moving points from list to newList
           }
       }
       return newList;
@@ -84,12 +84,12 @@ int index,target;
               counter ++;
           }
       }
-      newList = new int[10-counter];
+      newList = new int[10-counter]; // size of newList is list - every point that will be removed
       int pos = 0;
       for(int i = 0; i<10; i++){
-          if(list[i] != target){
+          if(list[i] != target){ //loop only transcribes value of list to newList if it isn't the int chosen by user
               newList[pos] = list[i];
-              pos++;
+              pos++; //position in newList only changes in the loop when it has been filled
           }
       }
       return newList;
